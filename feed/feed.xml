@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Cinomod</title>
+	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
+	
+	<link href="https://cinomod.dev/feed/feed.xml" rel="self"/>
+	<link href="https://cinomod.dev/"/>
+	<updated>2021-10-17T00:00:00Z</updated>
+	<id>https://cinomod.dev/</id>
+	<author>
+		<name>Dominic Manthoko</name>
+		<email>cinomod.dev@gmail.com</email>
+	</author>
+	
+	<entry>
+		<title>My first post -  How did I start this site?</title>
+		<link href="https://cinomod.dev/posts/firstpost/"/>
+		<updated>2021-10-17T00:00:00Z</updated>
+		<id>https://cinomod.dev/posts/firstpost/</id>
+		<content type="html">&lt;p&gt;Hi there,&lt;/p&gt;
+&lt;p&gt;Welcome to my first my post.&lt;/p&gt;
+&lt;p&gt;For the past year or so, I have been meaning to create my own static website but never really got around to doing it. Then someday, I came across a &lt;a href=&quot;https://dev.to/bholmesdev/before-building-your-next-static-site-with-react-consider-this-2b60&quot;&gt;post&lt;/a&gt; on &lt;a href=&quot;http://dev.to/&quot;&gt;dev.to&lt;/a&gt; that spoke about this very same topic I was interested in. In that post, the author Ben talks about 11ty, which is a static website generated I have not heard about before.&lt;/p&gt;
+&lt;p&gt;Fast forward a couple of weeks after reading that article, I checked out the &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt; page and at first, did find it a bit a hassle to navigate through the site. Simply reading through some of the pages didn&#39;t help me learn how to use the thing. However, after following the &lt;a href=&quot;https://learneleventyfromscratch.com/&quot;&gt;Learn Eleventy from Scratch&lt;/a&gt; tutorial, which is was quite straighforward to follow along, I was able to get an idea of how to get started in 11ty.&lt;/p&gt;
+&lt;p&gt;Although I do know how to code in Java and a bit of JavaScript, I can honestly say that I am quite to web development. So, to start of this very website you are reading, I simply used the &lt;a href=&quot;https://github.com/11ty/eleventy-base-blog&quot;&gt;eleventy-base-blog&lt;/a&gt; starter project to work from. Thus, my intention with this site is to explore web development a bit more.&lt;/p&gt;
+&lt;p&gt;Thanks for reading!!&lt;/p&gt;
+</content>
+	</entry>
+</feed>
