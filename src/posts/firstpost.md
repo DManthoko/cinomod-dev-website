@@ -1,26 +1,20 @@
 ---
-title: This is my first post.
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+title: My first post -  How did I start this site?
+description: How I went about getting website up
+date: 2021-10-17
 tags:
-  - another tag
+  - 11ty
 layout: layouts/post.njk
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Hi there,
 
-## Section Header
+Welcome to my first my post.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+For the past year or so, I have been meaning to create my own static website but never really got around to doing it. Then someday, I came across a [post](https://dev.to/bholmesdev/before-building-your-next-static-site-with-react-consider-this-2b60) on dev.to that spoke about this very same topic I was interested in. In that post, the author Ben talks about 11ty, which is a static website generated I have not heard about before.
 
-``` text/2-3
-// this is a command
-function myCommand() {
-	let counter = 0;
-	counter++;
-}
+Fast forward a couple of weeks after reading that article, I checked out the [11ty](https://www.11ty.dev/) page and at first, did find it a bit a hassle to navigate through the site. Simply reading through some of the pages didn't help me learn how to use the thing. However, after following the [Learn Eleventy from Scratch](https://learneleventyfromscratch.com/) tutorial, which is was quite straighforward to follow along, I was able to get an idea of how to get started in 11ty.
 
-// Test with a line break above this line.
-console.log('Test');
-```
+Although I do know how to code in Java and a bit of JavaScript, I can honestly say that I am quite to web development. So, to start of this very website you are reading, I simply used the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) starter project to work from. Thus, my intention with this site is to explore web development a bit more.
+
+Thanks for reading!!

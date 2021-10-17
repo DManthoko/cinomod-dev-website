@@ -7,4 +7,4 @@ eleventyNavigation:
   order: 3
 ---
 
-I am a person that writes stuff.
+Bsc Electrical & Computer Graduate from the University of Cape Town. Currently working a Cloud Support Engineer for the Media and Content Delivery team at AWS.
