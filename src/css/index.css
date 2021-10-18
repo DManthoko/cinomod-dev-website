@@ -21,6 +21,11 @@ body {
   color: var(--darkgray);
   background-color: #F5FBEF;
 }
+
+body {
+  padding: 0.6em
+}
+
 p:last-child {
   margin-bottom: 0;
 }
