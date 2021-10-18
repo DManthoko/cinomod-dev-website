@@ -19,7 +19,7 @@ body {
   margin: 0;
   font-family: -apple-system, system-ui, sans-serif;
   color: var(--darkgray);
-  background-color: var(--white);
+  background-color: #F5FBEF;
 }
 p:last-child {
   margin-bottom: 0;
@@ -39,13 +39,23 @@ a[href] {
 a[href]:visited {
   color: var(--navy);
 }
+
 main {
-  padding: 1rem;
+  flex-grow: 1;
+  max-width: 60ch;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1em;
 }
+
 main :first-child {
   margin-top: 0;
 }
 header {
+  flex-grow: 1;
+  max-width: 60ch;
+  width: 100%;
+  margin: 0 auto;
   border-bottom: 1px dashed var(--lightgray);
 }
 header:after {
@@ -53,6 +63,7 @@ header:after {
   display: table;
   clear: both;
 }
+
 table {
   margin: 1em 0;
 }
