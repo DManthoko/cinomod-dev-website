@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/posts/firstpost/</loc>
+    <loc>https://cinomod.dev/posts/firstpost/</loc>
     <lastmod>2021-10-17</lastmod>
   </url>
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/about/</loc>
-    <lastmod>2021-10-17</lastmod>
+    <loc>https://cinomod.dev/about/</loc>
+    <lastmod>2021-10-18</lastmod>
   </url>
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/</loc>
-    <lastmod>2021-10-17</lastmod>
+    <loc>https://cinomod.dev/</loc>
+    <lastmod>2021-10-18</lastmod>
   </url>
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/page-list/</loc>
-    <lastmod>2021-10-17</lastmod>
+    <loc>https://cinomod.dev/page-list/</loc>
+    <lastmod>2021-10-18</lastmod>
   </url>
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/posts/</loc>
-    <lastmod>2021-10-17</lastmod>
+    <loc>https://cinomod.dev/posts/</loc>
+    <lastmod>2021-10-18</lastmod>
   </url>
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/tags/</loc>
-    <lastmod>2021-10-17</lastmod>
+    <loc>https://cinomod.dev/tags/</loc>
+    <lastmod>2021-10-18</lastmod>
   </url>
   
   <url>
-    <loc>https://cinomod.dev/cinomod-dev-website/tags/11ty/</loc>
-    <lastmod>2021-10-17</lastmod>
+    <loc>https://cinomod.dev/tags/11ty/</loc>
+    <lastmod>2021-10-18</lastmod>
   </url>
 </urlset>

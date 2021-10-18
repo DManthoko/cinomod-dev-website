@@ -3,7 +3,7 @@
 	<title>Cinomod</title>
 	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
 	
-	<link href="https://cinomod.dev/cinomod-dev-website/feed/feed.xml" rel="self"/>
+	<link href="https://cinomod.dev/feed/feed.xml" rel="self"/>
 	<link href="https://cinomod.dev/"/>
 	<updated>2021-10-17T00:00:00Z</updated>
 	<id>https://cinomod.dev/</id>
@@ -14,9 +14,9 @@
 	
 	<entry>
 		<title>My first post -  How did I start this site?</title>
-		<link href="https://cinomod.dev/cinomod-dev-website/posts/firstpost/"/>
+		<link href="https://cinomod.dev/posts/firstpost/"/>
 		<updated>2021-10-17T00:00:00Z</updated>
-		<id>https://cinomod.dev/cinomod-dev-website/posts/firstpost/</id>
+		<id>https://cinomod.dev/posts/firstpost/</id>
 		<content type="html">&lt;p&gt;Hi there,&lt;/p&gt;
 &lt;p&gt;Welcome to my first my post.&lt;/p&gt;
 &lt;p&gt;For the past year or so, I have been meaning to create my own static website but never really got around to doing it. Then someday, I came across a &lt;a href=&quot;https://dev.to/bholmesdev/before-building-your-next-static-site-with-react-consider-this-2b60&quot;&gt;post&lt;/a&gt; on &lt;a href=&quot;http://dev.to/&quot;&gt;dev.to&lt;/a&gt; that spoke about this very same topic I was interested in. In that post, the author Ben talks about 11ty, which is a static website generated I have not heard about before.&lt;/p&gt;

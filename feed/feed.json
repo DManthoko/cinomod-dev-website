@@ -10,8 +10,8 @@
     "url": "https://cinomod.dev/about-me/"
   },
   "items": [{
-      "id": "https://cinomod.dev/cinomod-dev-website/posts/firstpost/",
-      "url": "https://cinomod.dev/cinomod-dev-website/posts/firstpost/",
+      "id": "https://cinomod.dev/posts/firstpost/",
+      "url": "https://cinomod.dev/posts/firstpost/",
       "title": "My first post -  How did I start this site?",
       "content_html": "<p>Hi there,</p>\n<p>Welcome to my first my post.</p>\n<p>For the past year or so, I have been meaning to create my own static website but never really got around to doing it. Then someday, I came across a <a href=\"https://dev.to/bholmesdev/before-building-your-next-static-site-with-react-consider-this-2b60\">post</a> on <a href=\"http://dev.to/\">dev.to</a> that spoke about this very same topic I was interested in. In that post, the author Ben talks about 11ty, which is a static website generated I have not heard about before.</p>\n<p>Fast forward a couple of weeks after reading that article, I checked out the <a href=\"https://www.11ty.dev/\">11ty</a> page and at first, did find it a bit a hassle to navigate through the site. Simply reading through some of the pages didn't help me learn how to use the thing. However, after following the <a href=\"https://learneleventyfromscratch.com/\">Learn Eleventy from Scratch</a> tutorial, which is was quite straighforward to follow along, I was able to get an idea of how to get started in 11ty.</p>\n<p>Although I do know how to code in Java and a bit of JavaScript, I can honestly say that I am quite to web development. So, to start of this very website you are reading, I simply used the <a href=\"https://github.com/11ty/eleventy-base-blog\">eleventy-base-blog</a> starter project to work from. Thus, my intention with this site is to explore web development a bit more.</p>\n<p>Thanks for reading!!</p>\n",
       "date_published": "2021-10-17T00:00:00Z"
