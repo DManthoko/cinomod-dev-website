@@ -4,11 +4,15 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
+
+<p> Welcome to the cinomod site. A site where I post about the random things I learn about every now and then </p>
+
+
 {% set maxPosts = collections.posts.length | min(3) %}
-<h1>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h1>
+<h1>Most recent {% if maxPosts == 1 %}note{% else %}{{ maxPosts }} notes{% endif %}</h1>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the Blog history</a>.</p>
+<p>More posts can be found in the <a href="{{ '/posts/' | url }}">note</a> history.</p>
