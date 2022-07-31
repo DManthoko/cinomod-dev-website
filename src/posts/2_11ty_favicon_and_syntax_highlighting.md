@@ -15,7 +15,7 @@ This blog is based of the [eleventy-base-blog](https://github.com/11ty/eleventy-
 
 Before specifying a favicon to use on my site, of course, I would first need to have a favicon that I can use. [favicon.io](https://favicon.io/) is a free Favicon generator site, which is what I used to create my favicons.
 
-In my case, I used the **text -> ico** option to create my favicon. The site allows you to download the generated favicons as a zip file. The extracted folder would contain a favicon.ico file, and a few other png files. I copied the favicon.ico and related images to my src/img/favicon folder.
+I used the **text -> ico** option to create my favicon. The site allows you to download the generated favicons as a zip file. The extracted folder would contain a favicon.ico file, and a few other png files. I copied the favicon.ico and related images to my src/img/favicon folder.
 
 Although the images have been included in the src folder, they aren't automatically included in the output folder. In the [.eleventy.js](https://github.com/11ty/eleventy-base-blog/blob/main/.eleventy.js) file, you will see the following two lines:
 
@@ -26,7 +26,15 @@ eleventyConfig.addPassthroughCopy("img");
 eleventyConfig.addPassthroughCopy("css");
 ```
 
-Using the [addPassthroughCopy](https://www.11ty.dev/docs/copy/) method, the above would take the contents of the *src/img* and *src/css* folders, and include them in the root of the output folder.
+Using the [addPassthroughCopy](https://www.11ty.dev/docs/copy/) method, the above should take the contents of the *src/img* and *src/css* folders, and include them in the root of the output folder.
+
+In my case, when I deployed my website, I found that the resulting output folder did not copy over the images and css files. After updating the above code snippet to look as shown below, the contents of the img folder was copied to the root of my site, and the css folder was simply copied over.
+
+```js
+// Copy the `img` and `css` folders to the output
+eleventyConfig.addPassthroughCopy({"./src/img" : "/"});
+eleventyConfig.addPassthroughCopy("./src/css");
+```
 
 Now that the favicon images would be included in the output folder, the html that is generated still needs to know which favicon to use. 
 
