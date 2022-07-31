@@ -1,6 +1,6 @@
 ---
 title: My first post -  How did I start this site?
-description: How I went about getting website up
+description: How I went about setting up my website
 date: 2021-10-17
 tags:
   - 11ty
@@ -15,6 +15,6 @@ For the past year or so, I have been meaning to create my own static website but
 
 Fast forward a couple of weeks after reading that article, I checked out the [11ty](https://www.11ty.dev/) page and at first, did find it a bit a hassle to navigate through the site. Simply reading through some of the pages didn't help me learn how to use the thing. However, after following the [Learn Eleventy from Scratch](https://learneleventyfromscratch.com/) tutorial, which is was quite straighforward to follow along, I was able to get an idea of how to get started in 11ty.
 
-Although I do know how to code in Java and a bit of JavaScript, I can honestly say that I am quite to web development. So, to start of this very website you are reading, I simply used the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) starter project to work from. Thus, my intention with this site is to explore web development a bit more.
+Although I do know how to code in Java and a bit of JavaScript, I can honestly say that I am quite new to web development. So, to start of this very website you are reading, I simply used the [eleventy-base-blog](https://github.com/11ty/eleventy-base-blog) starter project to work from. Thus, my intention with this site is to explore web development a bit more.
 
 Thanks for reading!!
