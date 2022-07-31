@@ -19,7 +19,6 @@ I used the **text -> ico** option to create my favicon. The site allows you to d
 
 Although the images have been included in the src folder, they aren't automatically included in the output folder. In the [.eleventy.js](https://github.com/11ty/eleventy-base-blog/blob/main/.eleventy.js) file, you will see the following two lines:
 
-
 ```js
 // Copy the `img` and `css` folders to the output
 eleventyConfig.addPassthroughCopy("img");
