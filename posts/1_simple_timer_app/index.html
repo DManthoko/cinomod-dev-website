@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a simple timer application</title>
+    <meta name="description" content="Describing I went about building a basic timer application">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-laserwave.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Cinomod">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Cinomod">
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="/">Cinomod</a></h1>
+      <ul class="nav">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/posts/">Notes</a></li>
+        <li class="nav-item"><a href="/about/">About Me</a></li>
+      </ul>
+    </header>
+
+    <main class="tmpl-post">
+
+      <h1>Creating a simple timer application</h1>
+
+<time datetime="2022-07-31">31 Jul 2022</time><a href="/tags/html/" class="post-tag">HTML</a><a href="/tags/javascript/" class="post-tag">JavaScript</a>
+
+<p>In this post, I will discuss a few points about a simple timer application that I created. It is written in HTML and Vanilla JavaScript.</p>
+<p>The source code can be found <a href="https://github.com/cinomodev/cinomod-dev-projects/tree/main/1_simple_timer_app/version_1">here</a>.</p>
+<p>Let's get into discussing the source code. Below, you will see a snippet of the body of the index.html file.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>timerApp<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>countDownTimer<span class="token punctuation">"</span></span> <span class="token attr-name">hidden</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>    <br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>countDownTimerDetails<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><br>          Specify a duration in the format hh:mm:ss<br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><br><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>duration<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">></span></span><br><br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">startTimer</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><br>          Start Countdown<br>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
+<p>Within the div with id <em><strong>countDownTimerDetails</strong></em>, this is where I setup what is needed to get the countdown duration from the user. With the current version of the simple timer app:</p>
+<ul>
+<li>The text in the &lt;p&gt; informs the user what format to use when specifying a duration</li>
+<li>The duration needs to be specified inside the textarea field</li>
+<li>Once a user has entered a duration, they would then select the <em><strong>Start Countdown</strong></em> button. This will trigger a startTimer function, which I have defined in a separate script.js file.</li>
+</ul>
+<p>After getting the duration, the startTimer() function would remove the hidden tag from <em><strong>countDownTimer</strong></em>. This is where the timer would be seen. Once the countdown has been provided by the user, there is no longer any need to keep the textarea field. With that in mind, the startTimer() would add the hidden tag to <em><strong>countDownTimerDetails</strong></em>.</p>
+<p>The countdown duration is taken in the form <strong>hh:mm:ss</strong>. This is then converted to seconds. The calculation is quite simple. There are 60 seconds in a minute and 3600 seconds in a hour. To convert hh:mm:ss to seconds, the <em>hh</em> value is multiplied by 3600 (60^2) and the <em>mm</em> value is multiplied by 60. <em>ss</em> is already in seconds, thus, this value is taken as is.</p>
+<p>Converting the duration to seconds makes it simpler to handle in code. But the duration still needs to presented in the form <strong>hh:mm:ss</strong> to the user. I adapted the code seen in the W3Schools <a href="https://www.w3schools.com/howto/howto_js_countdown.asp">JavaScript Countdown Timer</a> example to suit my needs. In the W3Schools example, the countdown duration is counted in milliseconds. In my case, I am using seconds, thus, I updated the hours, minutes and seconds calculations to look like so:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token comment">/**<br> * <br> * Converts seconds to hours, minutes and seconds<br> * <br> * @param {number} countDownDuration Amount of seconds still remaining in the countdown<br> * @return {string} duration A string the format hh:mm:ss<br> */</span><br><span class="token keyword">function</span> <span class="token function">getTime</span><span class="token punctuation">(</span><span class="token parameter">countDownDuration</span><span class="token punctuation">)</span><span class="token punctuation">{</span><br>    <span class="token keyword">const</span> hours <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>countDownDuration <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">const</span> minutes <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>countDownDuration <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token keyword">const</span> seconds <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token punctuation">(</span>countDownDuration <span class="token operator">%</span> <span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><br>    <span class="token keyword">return</span> hours <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> minutes <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> seconds<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Let's say you enter the countdown duration as 02:40:50 (2 hours, 40 minutes and 50 seconds).</p>
+<p>The countdown duration is seconds would be:</p>
+<pre class="language-txt"><code class="language-txt">2 hours    = 7200 seconds<br>40 minutes = 2400 seconds<br>50 seconds =   50 seconds<br>             <br>Total  = 9650 seconds</code></pre>
+<p>60 * 60 * 24 is 86400. The remainder of 9650 divided by 86400 would be 9650. 9650 divided by 60*60 is roughly 2.68. The floor of this is two.</p>
+<p>The remainder of 9650/3600 from the previous calculation is 2450 seconds. To convert this value minutes, divide by 60 and take the floor of the returned value.</p>
+<p>To get the number of seconds remaining, you would only need to get the remainder when dividing the countdown duration with 60.</p>
+
+<hr>
+<ul><li>Previous: <a href="/posts/0_firstpost/">My first post -  How did I start this site?</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /posts/1_simple_timer_app/ -->
+  </body>
+</html>
