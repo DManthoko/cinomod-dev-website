@@ -7,6 +7,10 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function(eleventyConfig) {
+  // Copy the `img` and `css` folders to the output
+  eleventyConfig.addPassthroughCopy("img");
+  eleventyConfig.addPassthroughCopy("css");
+
   // Add plugins
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
@@ -59,11 +63,6 @@ module.exports = function(eleventyConfig) {
 
     return filterTagList([...tagSet]);
   });
-
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy({ "./src/img/favicon": "/" });
-  // eleventyConfig.addPassthroughCopy("./src/img");
-  eleventyConfig.addPassthroughCopy("./src/css");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({
