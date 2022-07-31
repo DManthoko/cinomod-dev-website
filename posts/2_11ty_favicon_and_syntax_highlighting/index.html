@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax highlighting and favicon&#39;s in 11ty</title>
+    <meta name="description" content="How to add a Favicon and configure syntax highlighting in 11ty">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/prism-laserwave.css">
+    <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Cinomod">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="Cinomod">
+  </head>
+  <body>
+    <header>
+      <h1 class="home"><a href="/">Cinomod</a></h1>
+      <ul class="nav">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="/posts/">Notes</a></li>
+        <li class="nav-item"><a href="/about/">About Me</a></li>
+      </ul>
+    </header>
+
+    <main class="tmpl-post">
+
+      <h1>Syntax highlighting and favicon&#39;s in 11ty</h1>
+
+<time datetime="2022-07-31">31 Jul 2022</time><a href="/tags/11ty/" class="post-tag">11ty</a><a href="/tags/favicon/" class="post-tag">favicon</a><a href="/tags/syntaxhighlighting/" class="post-tag">syntaxhighlighting</a>
+
+<h2 id="adding-a-favicon" tabindex="-1">Adding a Favicon <a class="direct-link" href="#adding-a-favicon" aria-hidden="true">#</a></h2>
+<p>This blog is based of the <a href="https://github.com/11ty/eleventy-base-blog">eleventy-base-blog</a>. The base blog doesn't include a default favicon, thus, when creating my blog, I had to find  way to include a favicon.</p>
+<p>Before specifying a favicon to use on my site, of course, I would first need to have a favicon that I can use. <a href="https://favicon.io/">favicon.io</a> is a free Favicon generator site, which is what I used to create my favicons.</p>
+<p>In my case, I used the <strong>text -&gt; ico</strong> option to create my favicon. The site allows you to download the generated favicons as a zip file. The extracted folder would contain a favicon.ico file, and a few other png files. I copied the favicon.ico and related images to my src/img/favicon folder.</p>
+<p>Although the images have been included in the src folder, they aren't automatically included in the output folder. In the <a href="https://github.com/11ty/eleventy-base-blog/blob/main/.eleventy.js">.eleventy.js</a> file, you will see the following two lines:</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// Copy the `img` and `css` folders to the output</span><br>eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token string">"img"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>eleventyConfig<span class="token punctuation">.</span><span class="token function">addPassthroughCopy</span><span class="token punctuation">(</span><span class="token string">"css"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Using the <a href="https://www.11ty.dev/docs/copy/">addPassthroughCopy</a> method, the above would take the contents of the <em>src/img</em> and <em>src/css</em> folders, and include them in the root of the output folder.</p>
+<p>Now that the favicon images would be included in the output folder, the html that is generated still needs to know which favicon to use.</p>
+<p>The eleventy base blog uses Nunjucks for templates. The base template can be found in <a href="https://github.com/11ty/eleventy-base-blog/blob/main/_includes/layouts/base.njk">_includes/layouts/base.njk</a>.</p>
+<p>In the head element, I used the link element shown below to specify the path to the favicon.ico file.</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <br>    <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <br>    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/x-icon<span class="token punctuation">"</span></span> <br>    <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/favicon.ico<span class="token punctuation">"</span></span><br><span class="token punctuation">></span></span></code></pre>
+<h2 id="updating-the-syntax-highlighting-theme" tabindex="-1">Updating the Syntax highlighting theme <a class="direct-link" href="#updating-the-syntax-highlighting-theme" aria-hidden="true">#</a></h2>
+<p>In addition to updating the favicon, I also wanted to modify the theme used for syntax highlighting.</p>
+<p>Referring back to the <a href="https://github.com/11ty/eleventy-base-blog/blob/main/_includes/layouts/base.njk">base.njk</a> file, in the head element, the default theme used for syntax highlighting is <em>/css/prism-base16-monokai.dark.css</em>.</p>
+<p>To change the syntax highlighting theme, all that I needed to do was download a new prism theme. The prism themes are available from the <a href="https://github.com/PrismJS/prism-themes">prism-themes</a> GitHub repository.</p>
+<p>In my case, I downloaded the Laserwave theme, and in the my css folder, replaced <em>prism-base16-monokai.dark.css</em> with <em>prism-laserwave.css</em>.</p>
+
+<hr>
+<ul><li>Previous: <a href="/posts/1_simple_timer_app/">Creating a simple timer application</a></li>
+</ul>
+
+    </main>
+
+    <footer></footer>
+
+    <!-- Current page: /posts/2_11ty_favicon_and_syntax_highlighting/ -->
+  </body>
+</html>

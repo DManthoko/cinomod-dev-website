@@ -12,6 +12,11 @@
   </url>
   
   <url>
+    <loc>https://cinomod.dev/posts/2_11ty_favicon_and_syntax_highlighting/</loc>
+    <lastmod>2022-07-31</lastmod>
+  </url>
+  
+  <url>
     <loc>https://cinomod.dev/about/</loc>
     <lastmod>2022-07-31</lastmod>
   </url>
@@ -48,6 +53,16 @@
   
   <url>
     <loc>https://cinomod.dev/tags/javascript/</loc>
+    <lastmod>2022-07-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cinomod.dev/tags/favicon/</loc>
+    <lastmod>2022-07-31</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://cinomod.dev/tags/syntaxhighlighting/</loc>
     <lastmod>2022-07-31</lastmod>
   </url>
 </urlset>
